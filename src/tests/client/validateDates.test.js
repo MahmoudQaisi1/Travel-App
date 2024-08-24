@@ -1,6 +1,5 @@
 import { validateDates } from '../../client/js/validateDates';
 
-// Helper function to create a mock DOM structure
 function setupMockDOM() {
     document.body.innerHTML = `
         <div class="date-form-section">
@@ -24,7 +23,7 @@ describe('validateDates', () => {
     test('should return true and hide error messages for valid dates', () => {
         const startDate = new Date();
         const endDate = new Date();
-        endDate.setDate(startDate.getDate() + 1); // End date is one day after start date
+        endDate.setDate(startDate.getDate() + 1); 
 
         const result = validateDates(startDate, endDate);
 
@@ -36,7 +35,7 @@ describe('validateDates', () => {
 
     test('should return false and show error messages for start date before today', () => {
         const startDate = new Date();
-        startDate.setDate(startDate.getDate() - 10); // 10 days before today
+        startDate.setDate(startDate.getDate() - 10);
         const endDate = new Date();
         endDate.setDate(startDate.getDate() + 1);
 
@@ -50,7 +49,7 @@ describe('validateDates', () => {
     test('should return false and show error messages for end date before start date', () => {
         const startDate = new Date();
         const endDate = new Date();
-        endDate.setDate(startDate.getDate() - 1); // End date is one day before start date
+        endDate.setDate(startDate.getDate() - 1);
 
         const result = validateDates(startDate, endDate);
 
@@ -61,7 +60,7 @@ describe('validateDates', () => {
 
     test('should return false and show error messages if dates are more than 7 days from today', () => {
         const startDate = new Date();
-        startDate.setDate(startDate.getDate() + 8); // 8 days from today
+        startDate.setDate(startDate.getDate() + 8); 
         const endDate = new Date();
         endDate.setDate(startDate.getDate() + 1);
 

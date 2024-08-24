@@ -2,7 +2,6 @@ import { updateUI } from '../../client/js/updateUI';
 import trashIcon from '../../client/assets/icons/trash.svg';
 import rotateIcon from '../../client/assets/icons/rotate.svg';
 
-// Mock the imported icons for testing purposes
 jest.mock('../../client/assets/icons/trash.svg', () => 'mocked-trash-icon.svg');
 jest.mock('../../client/assets/icons/rotate.svg', () => 'mocked-rotate-icon.svg');
 
@@ -17,7 +16,6 @@ describe('updateUI', () => {
             countryName: 'Test Country',
             weather: [
                 { day_temp: 25, night_temp: 15, description: 'Sunny', date: '2024-08-24', icon: 'mocked-weather-icon.svg' },
-                // Add more weather data if needed
             ]
         };
 

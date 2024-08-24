@@ -1,10 +1,9 @@
 import weatherbitRequest from '../../server/weatherbitRequest';
 
-// Mock the fetch function
 global.fetch = jest.fn();
 
 describe('weatherbitRequest', () => {
-    const coordinates = { lat: 35.6895, lng: 139.6917 }; // Example coordinates
+    const coordinates = { lat: 35.6895, lng: 139.6917 }; 
     const apiKey = 'dummyApiKey';
     
     afterEach(() => {
@@ -16,7 +15,6 @@ describe('weatherbitRequest', () => {
             data: [
                 { valid_date: '2024-08-21', high_temp: 30, low_temp: 20, weather: { description: 'Clear sky', icon: 'c01d' } },
                 { valid_date: '2024-08-22', high_temp: 28, low_temp: 18, weather: { description: 'Partly cloudy', icon: 'c02d' } }
-                // Add more mock data as needed
             ]
         };
         
