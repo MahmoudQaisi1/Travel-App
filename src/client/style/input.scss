@@ -1,0 +1,91 @@
+.text-form-section {
+  position: relative;
+  padding: $space-m 0 0;
+  margin-top: $space-s;
+  width: 80%;
+  border-bottom: $form-items-border;
+
+  .error-icon{
+    position: absolute;
+    right: 0;
+  }
+
+#location {
+  @include secondary-font();
+  width: 90%;
+  border: 0;
+  outline: 0;
+  font-size: 1.4rem;
+  color: $coyote;
+  padding: $space-xs 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  @media screen and (max-width: 767px){
+    font-size: 1rem;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form-label {
+    @include secondary-font();
+    font-size: 1.4rem;
+    cursor: text;
+    top: $space-l;
+    @media screen and (max-width: 767px){
+      font-size: 1rem;
+    }
+  }
+
+
+}
+
+.form-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1.4rem;
+  color: $drab-dark-brown;
+
+  @media screen and (max-width: 767px){
+    font-size: 1rem;
+  }
+}
+
+#location:focus {
+  ~ .form-label {
+    @include secondary-font();
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $drab-dark-brown;
+    @media screen and (max-width: 767px){
+      font-size: 0.8rem;
+    }
+  }
+  
+
+  &{
+    padding-bottom: $space-xs;
+    font-weight: 700;
+    border-width: $space-xs;
+    border-image: linear-gradient(to right, $drab-dark-brown, $coyote);
+    border-image-slice: 1;
+  }
+  
+}
+
+/* Reset input */
+#location {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+}

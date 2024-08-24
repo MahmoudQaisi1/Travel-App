@@ -1,0 +1,21 @@
+.section-wrapper{
+    @include flexDiv($alignment: center);
+    background: url('../assets/images/map.jpg') right top;
+    background-size: cover;
+    position: relative;
+}
+
+.inner-wrapper{
+    height: 90%;
+    display: grid;
+    grid-template-rows: 200px auto;
+    background-color: $ecru-50;
+    padding: $space-s; 
+    gap: $space-xs;
+    width: 90%;
+
+    @media screen and (max-width: 767px){
+        grid-template-rows: auto;
+        grid-template-columns: 120px auto;
+    }
+}

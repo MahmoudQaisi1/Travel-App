@@ -1,0 +1,74 @@
+/* Set font, font size, and basic styles */
+input[type="date"] {
+    @include secondary-font($weight: 600);
+    font-size: $main-font-size; 
+    color: $drab-dark-brown;
+    background-color: transparent;
+    border: none;
+    width: 100%; 
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer; 
+    @media screen and (max-width: 767px){
+        font-size: $main-font-size-s;
+    }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    font-size: $main-font-size;
+    color: $drab-dark-brown; 
+
+    @media screen and (max-width: 767px){
+        font-size: $main-font-size-s;
+    }
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: $drab-dark-brown;
+    border-radius: $space-xs; 
+}
+
+/* Style for Firefox */
+input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+/* General style adjustments */
+input[type="date"]:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* Custom styling for the date picker popup (for modern browsers) */
+input[type="date"]::after {
+    content: '';
+    position: absolute;
+    background-color: $coyote !important;
+    border-radius: $space-xs;
+    z-index: 10;
+}
+
+/* Custom styles for the date picker pop-up */
+input[type="date"]::-webkit-datetime-edit {
+    background-color: transparent; 
+    color: $drab-dark-brown; 
+    font-weight: 600; 
+    padding: $space-s; 
+}
+
+/* Adjust the size of the pop-up calendar window */
+input[type="date"]::-webkit-calendar-picker-indicator::before {
+    content: '';
+    display: block;
+    width: $space-l;
+    height: $space-l; 
+    background-color: $ecru; 
+}

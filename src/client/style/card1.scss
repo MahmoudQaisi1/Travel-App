@@ -1,0 +1,13 @@
+.card1{
+    @include centerElement();
+    z-index: 1;
+    &-image{
+        width: 200px;
+        border: $polaroids-border;
+    }
+
+    &-title{
+        @include primary-font;
+        font-size: $main-font-size-l;
+    }
+}

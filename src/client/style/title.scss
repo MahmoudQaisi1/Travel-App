@@ -1,0 +1,13 @@
+.title-wrapper{
+    @include primary-font;
+    @include flexDiv;
+    width: 100%;
+    font-size: $header-font-size;
+    color: $drab-dark-brown;
+    padding-left: $space-m;
+    text-align: center;
+
+    @media screen and (max-width: 767px){
+        font-size: $header-font-size-s;
+    }
+}

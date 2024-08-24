@@ -1,0 +1,13 @@
+.card{
+    background-color: $ecru;
+    @include flexDiv($alignment: space-evenly);
+    flex-direction: column;
+    height: 200px;
+    width: 250px;
+    box-shadow: $card-shadow;
+    transition: z-index 0.2s;
+
+    &.top{
+        z-index: 2;
+    }
+}

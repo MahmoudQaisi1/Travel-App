@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=New+Amsterdam&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="grid-wrapper">
+        <div class="section-wrapper">
+            <div class="inner-wrapper">
+                <div class="title-wrapper">
+                    <h1>Traveler's Journey</h1>
+                </div>
+
+                <form id="form">
+                    
+                    <div class="text-form-section field">
+                        <input type="text" name="location" placeholder="Travel Location" id="location" required />
+                        <label for="location" class="form-label">Travel Location</label>
+                        <img id="location-error" class="error-icon" alt="" src=""/>
+                    </div>
+                    
+                    <div class="date-form-section">
+                        <label for="dep-date" class="form-label">Start Date</label>
+                        <input type="date" name="dep-date" id="dep-date" required />
+                        <img id="dep-date-error" class="error-icon" alt="" src=""/>
+                    </div>
+                    
+                    <div class="date-form-section">
+                        <label for="ret-date" class="form-label">End Date</label>
+                        <input type="date" name="ret-date" id="ret-date" required />
+                        <img id="ret-date-error" class="error-icon" alt="" src=""/>
+                    </div>
+                    
+                    <div class="button-form-section">
+                        <button type="submit">Explore</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="destinations-wrapper">
+            
+        </div>
+    </div>
+    
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>

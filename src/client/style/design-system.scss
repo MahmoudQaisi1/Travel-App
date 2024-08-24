@@ -1,0 +1,58 @@
+/*Colors*/
+$drab-dark-brown: #464132ff;
+$lion: #BB9C64ff;
+$ecru: #D8BC8Aff;
+$coyote: #735D3Aff;
+$ecru-50: rgba(216, 188, 138,0.5);
+
+
+/*Fonts*/
+@mixin primary-font(){
+    font-family: "New Amsterdam", serif;
+}
+
+@mixin secondary-font($weight:700){
+    font-family: "Merriweather", serif;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+/*Font sizes*/
+$header-font-size: 48px;
+$header-font-size-s: 32px;
+$main-font-size-l: 20px;
+$main-font-size: 16px;
+$main-font-size-s: 12px;
+$main-font-size-xs: 8px;
+
+/* Layout */
+@mixin flexDiv($alignment: center){
+    display: flex;
+    justify-content: $alignment;
+    align-items: center;
+}
+
+@mixin centerElement($degrees:3deg){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate($degrees);
+}
+
+/*borders*/
+$form-items-border: 4px solid $drab-dark-brown;
+$polaroids-border: 2px solid $drab-dark-brown;
+
+/*shadows*/
+$button-shadow:  0px 0px 5px 5px $drab-dark-brown;
+$card-shadow:  0px 0px 3px 3px $drab-dark-brown;
+$card-container-shadow: inset 0px 0px 5px 2px $drab-dark-brown;
+
+/* Spaces */
+$space-xs: 5px;
+$space-s: 10px;
+$space-m: 15px;
+$space-l: 25px;
+$space-xl: 40px;
+$space-xxl: 70px;
+

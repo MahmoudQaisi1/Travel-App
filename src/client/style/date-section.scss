@@ -1,0 +1,11 @@
+.date-form-section{
+    @include flexDiv($alignment: space-around);
+    width: 80%;
+    @include secondary-font;
+    border-bottom: $form-items-border;
+    font-size: $main-font-size;
+
+    @media screen and (max-width: 767px){
+        font-size: $main-font-size-s;
+    }
+}

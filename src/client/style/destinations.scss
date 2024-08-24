@@ -1,0 +1,20 @@
+.destinations-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $ecru-50;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: $space-m;
+    gap: $space-m;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+
+    @media screen and (max-width: 1100px) and (min-width: 767px){
+        grid-template-columns: 1fr;
+    }
+    
+    @media screen and (max-width: 767px){
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,4 @@
+#form{
+    @include flexDiv($alignment: space-evenly);
+    flex-direction: column;
+}

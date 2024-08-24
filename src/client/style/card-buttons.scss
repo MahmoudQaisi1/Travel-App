@@ -1,0 +1,44 @@
+.card-button{
+	position: absolute;
+	background-color: transparent;
+	border: 0;
+	top: $space-s;
+	img{
+		width: 20px;
+		&:hover{
+			animation: wiggle 0.7s ease-in 1 forwards;
+		}
+	}
+}
+
+.delete-button{
+	left: $space-s;
+}
+
+.rotate-button{
+	right: $space-s;
+}
+
+
+
+@keyframes wiggle{
+	0%{
+		transform: rotate(10deg);
+	}
+
+	25%{
+		transform: rotate(-10deg);
+	}
+
+	50%{
+		transform: translateY(2px);
+	}
+
+	75%{
+		transform: translateY(-2px);
+	}
+
+	100%{
+		transform: none;
+	}
+}

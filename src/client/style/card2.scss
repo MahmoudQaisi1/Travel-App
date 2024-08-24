@@ -1,0 +1,42 @@
+.card2{
+    @include centerElement($degrees:-2deg);
+    @include secondary-font();
+    justify-content: start;
+    z-index: 0;
+    .weather-container{
+        @include flexDiv($alignment: start);
+        flex-direction: column;
+        margin: $space-s 0;
+        border: $polaroids-border;
+        height: 100%;
+        &-title{
+            margin: $space-s;
+        }
+
+        .weather-days-container{
+            display: grid;
+            grid-template-columns: repeat(4,60px);
+            grid-template-rows: 60px 60px;
+            font-size: $main-font-size-xs;
+            margin-bottom: $space-xs;
+            .weather-day-container{
+                @include flexDiv($alignment: space-evenly);
+                flex-direction: column;
+                position: relative;
+                border: $polaroids-border;
+                .weather-day-icon{
+                    @include centerElement($degrees:0deg);
+                    width: 100%;
+                    background-color: $drab-dark-brown;
+                    transition: visibility 0.2s;
+                }
+
+                &:hover > .weather-day-icon{
+                    visibility: hidden;
+                }
+            }
+
+            
+        }
+    }
+}
